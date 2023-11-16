@@ -69,3 +69,14 @@ function convert_to_unicode() {
         }
     }
 } 
+
+function copyToClipboard() {
+    var textarea = document.getElementById("unicode_text");
+    navigator.clipboard.writeText(textarea.value)
+        .then(() => {
+            toastr.success('Copied to clipboard')
+        })
+        .catch(err => {
+            toastr.error('Failed to copy')
+        });
+}

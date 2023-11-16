@@ -17,11 +17,15 @@
     <meta property="og:description"
         content="Convert Preeti font to Unicode using our online Preeti to Unicode converter. Get accurate results every time. Try our Preeti to Unicode converter now!">
     <meta property="og:image" content="imgs/preeti-to-unicode.png">
-    <meta property="og:url" content="https://preeti-unicode.alivecoder.com">
+    <meta property="og:url" content="https://preeti-unicode.saileshrijal.com.np">
 
     <link rel="icon" href="imgs/favicon.png">
     <link rel="shortcut icon" href="imgs/favicon.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <title>Preeti to Unicode Converter - Convert Preeti to Unicode Online</title>
 </head>
 
@@ -34,11 +38,15 @@
         <div>
             <p>Preeti / प्रीती</p>
             <textarea class="form-control border-primary unicode_textarea" name="text" id="legacy_text" rows="18"
-                placeholder="Type Here / यहाँ टाइप गर्नुहोस् .... " onkeyup="convert_to_unicode()"></textarea>
+                placeholder="Type Here / यहाँ टाइप गर्नुहोस् .... " oninput="convert_to_unicode()"></textarea>
         </div>
 
         <div>
-            <p>Unicode / युनिकोड</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <p>Unicode / युनिकोड</p>
+                <p style="cursor: pointer;" onclick="copyToClipboard()"><i class="fa fa-copy" style="color: white;"></i>
+                </p>
+            </div>
             <textarea class="form-control preeti-text-area unicode_textarea unicode_textarea_preview" id="unicode_text"
                 rows="18" disabled></textarea>
         </div>
@@ -117,7 +125,8 @@
         <a href="https://saileshrijal.com.np" target="_blank">Sailesh Rijal</a>
     </footer>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="script.js"></script>
 </body>
 
